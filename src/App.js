@@ -1,13 +1,19 @@
+import { useState } from "react";
 import "./App.css";
 import Form from "./Form/Form";
+import FormList from "./Form/FormList";
 
 function App() {
+  const [info, setInfo] = useState([]);
+
   return (
     <div className="App">
-      <header className="container">
-        <h3>Hello this is first start</h3>
-        <Form />
+      <header style={{ marginTop: "20px" }}>
+        <Form info={info} setInfo={setInfo} />
       </header>
+      <section className="form_list">
+        <FormList info={info} />
+      </section>
     </div>
   );
 }
