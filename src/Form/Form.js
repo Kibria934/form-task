@@ -40,12 +40,12 @@ const Form = ({ info, setInfo }) => {
         <button className="btn submit" type="submit">
           Submit
           <br />
-          <span>ctrl S</span>
+          <span>(ctrl S)</span>
         </button>
         <button className="btn cancel" type="reset">
           Cancel
           <br />
-          <span>ESC</span>
+          <span>(ESC)</span>
         </button>
       </form>
     </div>

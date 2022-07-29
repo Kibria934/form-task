@@ -38,6 +38,15 @@ select {
   transition: all 0.4s;
 }
 
+.btn:hover {
+  box-shadow: 2px 5px 30px rgba(0, 0, 0, 0.548);
+}
+
+.btn span {
+  font-size: 16px;
+}
+
+
 .submit {
   color: green;
   margin: 20px;
