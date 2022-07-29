@@ -1,9 +1,19 @@
 import React from "react";
 
-const Form = () => {
+const Form = ({ info, setInfo }) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const date = e.target.date.value;
+    const amount = e.target.amount.value;
+    const payment = e.target.payment.value;
+    const remark = e.target.remark.value;
+    setInfo((pre) => [...pre, { date, amount, payment, remark }]);
+    e.target.reset();
+  };
+
   return (
     <div className="form-container">
-      <form>
+      <form onSubmit={handleSubmit}>
         <h2 style={{ textAlign: "left", fontSize: "18px" }}>
           <u>Receipt Details</u>
         </h2>
@@ -13,7 +23,7 @@ const Form = () => {
         </div>
         <div className="input-group">
           <label htmlFor="date">Amount</label>
-          <input type="" name="date" />
+          <input type="" name="amount" />
         </div>
         <div className="input-group">
           <label for="payment">Payment Mode</label>
@@ -25,12 +35,12 @@ const Form = () => {
         </div>
         <div className="input-group">
           <label htmlFor="date">Remark</label>
-          <input type="" name="date" />
+          <input type="" name="remark" />
         </div>
         <button className="btn submit" type="submit">
           Submit
         </button>
-        <button className="btn cancel" type="submit">
+        <button className="btn cancel" type="reset">
           Cancel
         </button>
       </form>
