@@ -19,11 +19,11 @@ const Form = ({ info, setInfo }) => {
         </h2>
         <div className="input-group">
           <label htmlFor="date">Receipt Date</label>
-          <input type="" name="date" />
+          <input placeholder="Enter Date (dd/mm/yy)" type="" name="date" />
         </div>
         <div className="input-group">
           <label htmlFor="date">Amount</label>
-          <input type="" name="amount" />
+          <input placeholder="Enter Amount (in INR)" type="" name="amount" />
         </div>
         <div className="input-group">
           <label for="payment">Payment Mode</label>
@@ -35,13 +35,17 @@ const Form = ({ info, setInfo }) => {
         </div>
         <div className="input-group">
           <label htmlFor="date">Remark</label>
-          <input type="" name="remark" />
+          <input placeholder="Enter Remark" type="" name="remark" />
         </div>
         <button className="btn submit" type="submit">
           Submit
+          <br />
+          <span>ctrl S</span>
         </button>
         <button className="btn cancel" type="reset">
           Cancel
+          <br />
+          <span>ESC</span>
         </button>
       </form>
     </div>
