@@ -15,8 +15,12 @@ const Form = () => {
         <input type="" name="date" />
       </div>
       <div className="input-group">
-        <label htmlFor="date">Payment Mode</label>
-        <input type="" name="date" />
+        <label for="payment">Payment Mode</label>
+        <select name="payment">
+          <option>Cash</option>
+          <option>Credit Card</option>
+          <option>Google pay</option>
+        </select>
       </div>
       <div className="input-group">
         <label htmlFor="date">Remark</label>
